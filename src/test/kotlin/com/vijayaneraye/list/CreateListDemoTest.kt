@@ -36,4 +36,15 @@ class CreateListDemoTest {
         assertEquals(0,emptyListUsingListOf.size)
     }
 
+
+    @Test
+    fun   `list with empty Always give null` () {
+        assertEquals(2, llistWithNull.size)
+    }
+
+    @Test
+    fun   `null list always return list without  null` () {
+        assertEquals(1, listOfNull.size)
+    }
+
 }

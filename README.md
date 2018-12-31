@@ -24,6 +24,7 @@ class Array<T> private constructor(){
 //..  
 }   
 ```
+Few examples using array are [here](https://github.com/AnerayeVijay/kotlin-collection/blob/master/src/test/kotlin/com/vijayaneraye/array/ArrayDemoTest.kt)
 ## Developers: Getting Started
 
 ```sh

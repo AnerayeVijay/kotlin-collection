@@ -15,6 +15,7 @@ class ArrayDemoTest {
         assertEquals("sun", arrayOfWeekDays.get(0))
     }
 
+
     @Test
     fun `check empty array of 3 size and add 3 items  `() {
         var emptyArray = emptyArray

@@ -1,4 +1,9 @@
 # kotlin-collection
+
+## Introduction
+Collections are used to store a group of related Objects in memory.Kotlin inherits collections framework from Java, but has significant changes from it in favor of functional programming. In this article, we are going to discuss the collections framework and collection operations in Kotlin.
+
+
 ## Developers: Getting Started
 
 ```sh

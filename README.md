@@ -56,6 +56,10 @@
             2. fun indexOf(element: @UnsafeVariance E):Int: This method is used to identify the index of an element in the list
             3. fun subList(fromIndex: Int, toIndex: Int): List<E>: Returns a portion of the list with the specified fromIndex and toIndex
              value.
+            4. Per the Kotlin docs, the difference between listOf and listOfNotNull:
+               - listOf: Returns an immutable list containing only the specified object element.
+               - listOfNotNull: Returns a new read-only list either of single given element, if it is not null, or empty list if the 
+                  element is null.
          
       #### MutableInterable
         1. An iterator over a mutable collection. Provides the ability to remove elements while iterating.

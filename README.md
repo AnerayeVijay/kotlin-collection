@@ -30,15 +30,41 @@
    - Kotlin has two base collection interfaces, namely Iterable and MutableIterable.
    
       #### Iterable
-         1. All collection interfaces in Kotlin are originated from the Iterable interface.
-         2. Iterable interface enables collections to be represented as a sequence of elements and they can be iterate naturally.
-         3. The Iterable interface is extended by the Collection interface, which defines basic read-only collection operations 
-         (likesize,isEmpty(), contains(), and so on).
+        1. All collection interfaces in Kotlin are originated from the Iterable interface.
+        2. Iterable interface enables collections to be represented as a sequence of elements and they can be iterate naturally.
+        3. The Iterable interface is extended by the Collection interface, which defines basic read-only collection operations 
+         (likesize,isEmpty(), contains(), and so on)
+         
+        ##### Collection
+        1. The Collection interface extends Iterable and defines methods for determining the presence of elements in the collection, as
+        well as the collection size and the check for the zero size container
+        ```
+           public interface Collection<out E> : Iterable<E> {
+             public val size: Int
+             public fun isEmpty(): Boolean
+    
+             public operator fun contains(element: @UnsafeVariance E):  Boolean
+             override fun iterator(): Iterator<E>
+             public fun containsAll(elements: Collection<@UnsafeVariance E>):Boolean 
+            }
+        ```
          
       #### MutableInterable
-         1. An iterator over a mutable collection. Provides the ability to remove elements while iterating.
-         2. The MutableCollection interface extends the Collection interface and the MutableIterable interface, adding the read-write
+        1. An iterator over a mutable collection. Provides the ability to remove elements while iterating.
+        2. The MutableCollection interface extends the Collection interface and the MutableIterable interface, adding the read-write
          feature.
+         
+        #### MutableIterable
+        1. Sibling of Collection iterface is the MutableIterable interface. All this does is redefine the parent iterator() method to
+        return a mutable iterator rather than an immutable one:
+        ```
+         public interface MutableIterable<out T> : Iterable<T> {
+            override fun iterator(): MutableIterator<T>
+         }
+
+        ```
+
+------------------------
 
 
 ## Developers: Getting Started

@@ -25,13 +25,18 @@ class Array<T> private constructor(){
 ```
 Few examples using array are [here](https://github.com/AnerayeVijay/kotlin-collection/blob/master/src/test/kotlin/com/vijayaneraye/array/ArrayDemoTest.kt)
 ### Iterable vs MutableIterable Interface
-   - Kotlin has two base collection interfaces, namely Iterable and MutableIterable.
+   Kotlin has two base collection interfaces, namely Iterable and MutableIterable.
       ##### Iterable
          1. All collection interfaces in Kotlin are originated from the Iterable interface.
          2. Iterable interface enables collections to be represented as a sequence of elements and they can be iterate naturally.
-          The Iterable interface is extended by the Collection interface, which defines basic read-only collection operations (like
+         3. The Iterable interface is extended by the Collection interface, which defines basic read-only collection operations (likesize,
+          isEmpty(), contains(), and so on).
 
-size, isEmpty(), contains(), and so on).
+      #### MutableInterable
+         1. An iterator over a mutable collection. Provides the ability to remove elements while iterating.
+         2. The MutableCollection interface extends the Collection interface and the MutableIterable interface, adding the read-write
+         feature.
+         
 
 ## Developers: Getting Started
 

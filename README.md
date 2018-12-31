@@ -48,13 +48,21 @@
              public fun containsAll(elements: Collection<@UnsafeVariance E>):Boolean 
             }
         ```
+        ###### List
+        - From the Collection class derives probably the most used type, List. List is one of the most commonly used collection data
+        types
+        - A list is an ordered collection of elements. Methods in this interface support read-only access to the collection 
+            1. fun get(index: Int):E: This method is used to get an element from the list at the given index.
+            2. fun indexOf(element: @UnsafeVariance E):Int: This method is used to identify the index of an element in the list
+            3. fun subList(fromIndex: Int, toIndex: Int): List<E>: Returns a portion of the list with the specified fromIndex and toIndex
+             value.
          
       #### MutableInterable
         1. An iterator over a mutable collection. Provides the ability to remove elements while iterating.
         2. The MutableCollection interface extends the Collection interface and the MutableIterable interface, adding the read-write
          feature.
-         
-        #### MutableIterable
+
+        ##### MutableIterable
         1. Sibling of Collection iterface is the MutableIterable interface. All this does is redefine the parent iterator() method to
         return a mutable iterator rather than an immutable one:
         ```

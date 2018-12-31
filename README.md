@@ -1,9 +1,29 @@
 # kotlin-collection
 
 ## Introduction
-Collections are used to store a group of related Objects in memory.Kotlin inherits collections framework from Java, but has significant changes from it in favor of functional programming. In this article, we are going to discuss the collections framework and collection operations in Kotlin.
+- Collections are used to store a group of related Objects in memory.Kotlin inherits collections framework from Java, but has significant changes from it in favor of functional programming. In this article, we are going to discuss the collections framework and collection operations in Kotlin.
+- The collections framework in Kotlin  is more functional than Java, it is easier to use and understand.
+- The collections framework is a set of classes and interfaces that provides a unified architecture for performing common groups of data related operations, such as the following:
+   1. Searching 
+   2. Sorting 
+   3. Insertion 
+   4. Deletion 
+   5. Manipulation
+   
+## Collection Hierarchy
+     ![Diagram](https://github.com/AnerayeVijay/kotlin-collection/blob/master/collectionHierarchy.png)  
 
-
+### Array 
+An array is a variable which can store multiple values on different-different indexes. Kotlin has an Array class which has set and get functions, size property, and some other useful methods.
+```
+class Array<T> private constructor(){  
+   val size:Int  
+   operator fun get(index: Int):T  
+   operator fun set(index: Int, value :T): Unit  
+   operator fun iterator(): Iterator<T>  
+//..  
+}   
+```
 ## Developers: Getting Started
 
 ```sh

@@ -35,12 +35,6 @@ class ListIterationTest {
         assertEquals(30,result)
     }
 
-    @Test
-    fun `multiple each item of list by two  and c  list` () {
-        val listOfInt = listOf<Int>(1,2,3,4,5,6,7,8,9,10)
-        val result  = listOfInt.map { it *2}.sum()
-        assertEquals(100,result)
-    }
 
     @Test
     fun   `find distinct item from the list` () {
@@ -60,31 +54,27 @@ class ListIterationTest {
         Product("Google Wifi system 1-Pack", "Google", 149.90),
         Product("Samsung Galaxy Tab 4", "Samsung", 127.67))
 
-    @Test
-    fun `get product by made by using group by` () {
-        val groupProductsWithMadeBy = productList.groupBy { it-> it.madeBy }
-        val appleProducts =  groupProductsWithMadeBy.get("Apple")
-        val googleProducts =  groupProductsWithMadeBy.get("Google")
-        val samsungProducts =  groupProductsWithMadeBy.get("Samsung")
 
+    @Test
+    fun `filter Apple product` () {
+        val appleProducts = productList.filter { it.madeBy =="Apple" }
         assertEquals(3,appleProducts?.size)
-        assertEquals(2,googleProducts?.size)
-        assertEquals(3,samsungProducts?.size)
     }
 
-    @Test
 
-    fun `find sum of product price by compay` () {
-       val sumofProduct = productList.groupBy { it.madeBy }
-           .mapValues { (company,product) -> product.sumByDouble { it.price } }
-        val expectedApplePriceSum = 1899.97
-        val expectedSamsungPriceSum = 1505.58
-        val expectedGooglePriceSum = 429.85
-        assertEquals(expectedApplePriceSum,sumofProduct.get("Apple"))
-        assertEquals(expectedSamsungPriceSum,sumofProduct.get("Samsung"))
-        assertEquals(expectedGooglePriceSum,sumofProduct.get("Google"))
+
+
+    val friends = listOf<Friend>(Friend("Andrii", "man", 1),
+    Friend("Yasya", "women", 2),
+    Friend("Alex", "man", 3))
+
+    @Test
+    fun `find friend name with id ==3` () {
+        val friend = friends.filter { it.id ==3 }.map { it.name }.first()
+        assertEquals("Alex",friend)
+
     }
 }
 
-
+data class Friend (val name: String, val geneder : String, val id : Int,val city: String ="Pune")
 data class Product(val name: String, val madeBy: String, val price: Double)

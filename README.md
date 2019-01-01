@@ -60,6 +60,9 @@
                - listOf: Returns an immutable list containing only the specified object element.
                - listOfNotNull: Returns a new read-only list either of single given element, if it is not null, or empty list if the 
                   element is null.
+        - Example of creating list is [here](https://github.com/AnerayeVijay/kotlin-collection/blob/master/src/test/kotlin/com/vijayaneraye/list/CreateListDemoTest.kt)
+        - Example of filtering list is [here](https://github.com/AnerayeVijay/kotlin-collection/blob/master/src/test/kotlin/com/vijayaneraye/list/FilterListTest.kt)
+        - Example of list map and filter map are [here](https://github.com/AnerayeVijay/kotlin-collection/blob/master/src/test/kotlin/com/vijayaneraye/list/ListMapAndFilterMap.kt)
          
       #### MutableInterable
         1. An iterator over a mutable collection. Provides the ability to remove elements while iterating.
